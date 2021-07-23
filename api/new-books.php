@@ -196,7 +196,7 @@ function getRandomNewBooks(Request $request, Response $response, array $args) {
 }
 function getBooks(Request $request, Response $response, array $args) {
   $path       = (!empty($request->getQueryParams()['path'])) ? $request->getQueryParams()['path'] : '';
-  $page_limit = 35; // Minimum 25
+  $page_limit = 50; // Minimum 25 (multiples of 25)
 
   $result = new stdClass;
   $result->response_status = 'OK';
