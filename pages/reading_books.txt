@@ -1,0 +1,5 @@
+<div class="row" style="display: flex; flex-wrap: wrap;"><br />
+<b>Notice</b>:  Undefined property: stdClass::$Row in <b>/home/httpd/pages/oviattphp/api-alma/alma/analytics.php</b> on line <b>49</b><br />
+<br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/home/httpd/pages/oviattphp/api-alma/alma/analytics.php</b> on line <b>311</b><br />
+</div>
