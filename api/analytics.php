@@ -96,6 +96,7 @@ function getNewBooks(Request $request, Response $response, array $args) {
   //     $book->mms_id = $v->Column4;
   //     $mms_id = $v->Column4;
   //     //print 'https://csun-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,exact,' . $v->Column4 . '&tab=everything&search_scope=EVERYTHING&vid=01CALS_UNO&facet=rtype,include,books&offset=0';
+        // print 'https://csu-un.primo.exlibrisgroup.com/discovery/search?query=any,exact,' . $v->Column4 . '&tab=LibraryCatalog&search_scope=MyInst_and_CI&sortby=rank&vid=01CALS_UNO:01CALS_UNO&facet=rtype,include,books&offset=0';
   //   }
   //   if (!empty($v->Column5)) {
   //     $book->publication_date = $v->Column5;
@@ -343,6 +344,7 @@ function displayBooks($books, $style = '') {
       //$book->mms_id = $v->Column4;
       $mms_id = $v->Column4;
       //print 'https://csun-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,exact,' . $v->Column4 . '&tab=everything&search_scope=EVERYTHING&vid=01CALS_UNO&facet=rtype,include,books&offset=0';
+      // print 'https://csu-un.primo.exlibrisgroup.com/discovery/search?query=any,exact,' . $v->Column4 . '&tab=LibraryCatalog&search_scope=MyInst_and_CI&sortby=rank&vid=01CALS_UNO:01CALS_UNO&facet=rtype,include,books&offset=0';
     }
     if (!empty($v->Column5)) {
       //$book->publication_date = $v->Column5;
@@ -464,10 +466,10 @@ function print_html($author, $creation_date, $isbn, $mms_id, $publication_date, 
   <div style="height: 100%; padding: 8px; margin: 12px;">
   <div style="display: flex; flex-direction: column; text-align: center;">
     <div style="flex: 0 1 50%; margin-bottom: 16px;">
-      <a href="https://csun-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,exact,' . $mms_id . '&tab=everything&search_scope=EVERYTHING&vid=01CALS_UNO&facet=rtype,include,books&offset=0" target="_blank"><img src="' . $img . '" alt="book cover" style="max-height: 105px; border: 1px solid #ddd;"/></a>
+      <a href="https://csu-un.primo.exlibrisgroup.com/discovery/search?query=any,exact,' . $mms_id . '&tab=LibraryCatalog&search_scope=MyInst_and_CI&sortby=rank&vid=01CALS_UNO:01CALS_UNO&facet=rtype,include,books&offset=0" target="_blank"><img src="' . $img . '" alt="book cover" style="max-height: 105px; border: 1px solid #ddd;"/></a>
     </div>
     <div style="flex: 0 1 50%;">
-      <p class="bold"><a href="https://csun-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,exact,' . $mms_id . '&tab=everything&search_scope=EVERYTHING&vid=01CALS_UNO&facet=rtype,include,books&offset=0" target="_blank">' . $title . '</a></p>
+      <p class="bold"><a href="https://csu-un.primo.exlibrisgroup.com/discovery/search?query=any,exact,' . $mms_id . '&tab=LibraryCatalog&search_scope=MyInst_and_CI&sortby=rank&vid=01CALS_UNO:01CALS_UNO&facet=rtype,include,books&offset=0" target="_blank">' . $title . '</a></p>
       <p>' . $author . '</p>
     </div>
     </div>
