@@ -2,7 +2,7 @@
 <?php
   $html = '';
   $ch = curl_init();
-  $url = 'https://librarydev.csun.edu/oviattphp/api-alma/alma/new-books.php/all';
+  $url = 'https://library.csun.edu/oviattphp/api-alma/alma/new-books.php/all';
 
   $data = array(
     'path' => 'reading-room',

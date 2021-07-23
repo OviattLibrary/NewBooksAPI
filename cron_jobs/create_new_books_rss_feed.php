@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
   $ch = curl_init();
-  $url = 'https://librarydev.csun.edu/oviattphp/api-alma/alma/new-books.php/random?';
+  $url = 'https://library.csun.edu/oviattphp/api-alma/alma/new-books.php/random?';
 
   $data = array(
     'path' => 'reading-room',
