@@ -2,9 +2,9 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-require 'slim/vendor/autoload.php';
+require_once 'slim/vendor/autoload.php';
+require_once 'config.php';
 
-const API_KEY               = 'API_KEY';
 const URL_ANALYTICS_REPORTS = 'https://api-na.hosted.exlibrisgroup.com/almaws/v1/analytics/reports?';
 const REPORTS = array(
   'new-books'              => '/shared/California State University, Northridge/Reports/new books',
@@ -18,12 +18,17 @@ const REPORTS = array(
 $app = new \Slim\App;
 
 // API Routes
+$app->get('/hello', 'hello');
 $app->get('/', 'getBooks');
 $app->get('/random', 'getRandomNewBooks');
 $app->get('/all', 'getAllBooks');
 $app->get('/{limit}/', 'getNewBooks');
 
 // API Implementations
+function hello(Request $request, Response $response, array $args) {
+  $response->getBody()->write("Hello");
+  return $response;
+}
 function getNewBooks(Request $request, Response $response, array $args) {
   $path  = (!empty($request->getQueryParams()['path'])) ? $request->getQueryParams()['path'] : '';
   $user_limit = (!empty($request->getQueryParams()['user_limit'])) ? $request->getQueryParams()['user_limit'] : '0';
